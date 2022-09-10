@@ -24,6 +24,7 @@ public class WeatherForecastController : ControllerBase
     {
         WatchLogger.Log("This is sample log from the app v1");
         
+        //_logger.LogDebug("This is sample log from the app v1");
         //throw new Exception("Something went wrong, testing watchdog");
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {

@@ -13,9 +13,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddWatchDogServices(opt =>
 {
     opt.IsAutoClear = false;
-    // opt.ClearTimeSchedule = WatchDogAutoClearScheduleEnum.Weekly;
+    opt.ClearTimeSchedule = WatchDogAutoClearScheduleEnum.Weekly;
     opt.SetExternalDbConnString = builder.Configuration.GetConnectionString("SampleDbConnection");
-    opt.SqlDriverOption = WatchDogSqlDriverEnum.PostgreSql;
+    opt.SqlDriverOption = WatchDogSqlDriverEnum.MSSQL;
 });
 
 var app = builder.Build();
